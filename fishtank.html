@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="A bug bounty program hosted by fishbowl.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>Fishbowl - Bug Bounty</title>
+
+    <link rel="icon" type="image/png" href="/assets/images/favicon.png">
+    <link rel="stylesheet" href="/assets/material.min.css">
+    <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <header class="mdl-layout__header mdl-layout__header--waterfall portfolio-header">
+        <div class="mdl-layout__header-row portfolio-logo-row">
+                <span class="mdl-layout__title">
+                    <div class="portfolio-logo"></div>
+                    <span class="mdl-layout__title">FishBowl bug bounty</span>
+                </span>
+        </div>
+        <div class="mdl-layout__header-row portfolio-navigation-row mdl-layout--large-screen-only">
+            <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font">
+                <a class="mdl-navigation__link" href="index.html">Overview</a>
+                <a class="mdl-navigation__link is-active" href="scope.html">Scope</a>
+                <a class="mdl-navigation__link" href="submission.html">Submission</a>
+            </nav>
+        </div>
+    </header>
+    <div class="mdl-layout__drawer mdl-layout--small-screen-only">
+        <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font">
+            <a class="mdl-navigation__link" href="index.html">Overview</a>
+            <a class="mdl-navigation__link is-active" href="scope.html">Scope</a>
+            <a class="mdl-navigation__link" href="submission.html">Submission</a>
+        </nav>
+    </div>
+    <main class="mdl-layout__content">
+        <div class="mdl-grid portfolio-max-width">
+            <div class="mdl-cell mdl-card mdl-shadow--4dp mdl-cell--12-col portfolio-card">
+                <div class="mdl-card__title">
+                    <h2 class="mdl-card__title-text">FishTank</h2>
+                </div>
+                <div class="mdl-card__supporting-text">
+                    <p>
+                        When storing credentials and other secrets in cloud solutions deep trust in the provider is required.
+                        At FishBowl, we value security over data collection.
+                        Therefore, we built our 100% free and secure credential storage <i>FishTank</i> to never send any data to our servers.
+                        All your secrets stay complete on your machine, protecting your data against attacks.
+                    </p>
+                    <h6>The facts</h6>
+                    <ul class="mdl-list">
+                        <li class="mdl-list__item">
+                            <span class="mdl-list__item-primary-content">
+                                <i class="material-icons mdl-list__item-icon">language</i>
+                                <span>FishTank is a web application</span>
+                            </span>
+                        </li>
+                        <li class="mdl-list__item">
+                            <span class="mdl-list__item-primary-content">
+                                <i class="material-icons mdl-list__item-icon">security</i>
+                                <span>Secrets are stored securely within your browser's <code>localStorage</code>.</span>
+                            </span>
+                        </li>
+                        <li class="mdl-list__item">
+                            <span class="mdl-list__item-primary-content">
+                                <i class="material-icons mdl-list__item-icon">lock</i>
+                                <span>Our engineers implemented the best encryption technology one can get.<sup>&dagger;</sup></span>
+                            </span>
+                        </li>
+                        <li class="mdl-list__item">
+                            <span class="mdl-list__item-primary-content">
+                                <i class="material-icons mdl-list__item-icon">done</i>
+                                <span>The scope of this project is limited to the client-side implementation of the FishTank.</span>
+                            </span>
+                        </li>
+                        <li class="mdl-list__item">
+                            <span class="mdl-list__item-primary-content">
+                                <i class="material-icons mdl-list__item-icon">pan_tool</i>
+                                <span>Do not perform any attacks against the server.</span>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="mdl-card__actions mdl-card--border">
+                    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent mdl-button--raised"
+                       href="?accepted">I accept the rules</a>
+                </div>
+            </div>
+            <div class="mdl-cell mdl-card mdl-shadow--4dp mdl-cell--12-col portfolio-card"  id="targets" style="display: none">
+                <div class="mdl-card__title">
+                    <h2 class="mdl-card__title-text">Targets</h2>
+                </div>
+                <div class="mdl-card__supporting-text">
+                    <table class="mdl-data-table mdl-js-data-table">
+                        <thead>
+                        <tr>
+                            <th>FishTank</th>
+                            <th>Password</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td><pre class="break">LglVOnp3GQgiYWtLaDZgAtQdltvGThVfpM3Cvh6RAlFVKDFRHxs9NQgzGiMGYwh9X31HJP2sRnEaG+sJ8DsbU25JFi7q8FoNNw==</pre></td>
+                            <td><code>Th1sIs4V3ry$3cur3P4ssw0rd</code></td>
+                        </tr>
+                        <tr>
+                            <td><pre class="break">aF8ccGR1QmIDSRJFEwUWLypj43LLGY2sdSPKHo/FGtsTQngfCR1qUyl/MX0yP2Z7Pzlgoz7DCzFZLXssD2R4D8+tE76ltzTnZxQMQ31mFBvIyhjS6cM3rQzIINgBAGYc2/Az3fjQ4sgi5DHYLyVSLuTeFoXau6reAtcgxCA2MfaLolHgq7TDggWATegXF6vt75Ll15G8yO0qu9Cu4uutgduspqebrL+c26PE5/XIkveggMFokUKxoNKh6K3K5OKcbE6GaVR0ikzG2fa60fXrtltmqWBKUJJ44Xvnc46os9hYFpRZUUpmEfJDhFa+sbiQfGiZKUl9Lg2HTMENws/ZSwYE3hUBCWALpGWwELm+RVl1fSNOdUhF</pre></td>
+                            <td>-</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <script>
+                        const targets = document.getElementById("targets")
+                        const query = location.search.substr(1).split("&").map(a => a.split("=")).reduce((a, b) => {
+                            a[b[0]] = b[1] || ""
+                            return a
+                        }, {})
+                        if (query['accepted'] !== undefined) {
+                            targets.style.display = 'block'
+                        }
+                    </script>
+                    <p>
+                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent mdl-button--raised"
+                           href="https://fishtank.fshbwl.ru/" target="_blank">Go to FishTank</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="spacer"></div>
+        <div class="footnotes">
+            <sup>&dagger;</sup> for free
+        </div>
+        <footer class="mdl-mini-footer">
+            <div class="mdl-mini-footer__left-section">
+                <div class="mdl-logo"></div>
+            </div>
+            <div class="mdl-mini-footer__right-section">
+                <ul class="mdl-mini-footer__link-list">
+                    <li><a href="terms.html">Privacy & Terms</a></li>
+                </ul>
+            </div>
+        </footer>
+    </main>
+</div>
+<script src="/assets/material.min.js"></script>
+<!-- This page is part of the TROOPERS20 student program, developed by @hnzlmnn. More information: https://troopers.de/students/ -->
+</body>
+</html>
